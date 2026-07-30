@@ -1,4 +1,4 @@
-﻿## What This Changes
+## What This Changes
 
 <!-- One logical change per PR -->
 
@@ -8,8 +8,8 @@
 
 ## Checklist
 
-- [ ] Vendor-neutral â€” no platform promotion or assumption
-- [ ] Synthetic content only â€” no real organizational data or identifiable details
+- [ ] Vendor-neutral — no platform promotion or assumption
+- [ ] Synthetic content only — no real organizational data or identifiable details
 - [ ] Follows existing structure (intake shape for use cases; threat-mapped for controls)
 - [ ] Tables/Mermaid render correctly in GitHub preview
 - [ ] Internal links resolve

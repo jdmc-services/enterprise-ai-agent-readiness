@@ -1,4 +1,4 @@
-﻿---
+---
 name: Use Case Request
 about: Propose a new agent use-case pattern for the framework
 labels: use-case
@@ -6,7 +6,7 @@ labels: use-case
 
 ## Operating Problem
 
-<!-- The business problem, in plain language â€” no platform names -->
+<!-- The business problem, in plain language — no platform names -->
 
 ## Proposed Capability
 

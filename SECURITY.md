@@ -1,12 +1,12 @@
-﻿# Security Policy
+# Security Policy
 
 ## Scope
 
-This repository contains a documentation framework â€” templates, control matrices, architecture patterns, and methodology. It ships no executable application code beyond repository-management PowerShell scripts, which perform only local file operations and standard `git`/`gh` commands.
+This repository contains a documentation framework — templates, control matrices, architecture patterns, and methodology. It ships no executable application code beyond repository-management PowerShell scripts, which perform only local file operations and standard `git`/`gh` commands.
 
 ## Reporting
 
-If you identify a security concern â€” an error in a control recommendation, a flaw in the reference architecture, or an issue in the scripts â€” open a GitHub issue using the **Risk Review** template, or contact the maintainer privately through the repository profile for anything sensitive.
+If you identify a security concern — an error in a control recommendation, a flaw in the reference architecture, or an issue in the scripts — open a GitHub issue using the **Risk Review** template, or contact the maintainer privately through the repository profile for anything sensitive.
 
 Please include: the file and section, the concern, and the scenario in which it matters. Substantive control-gap reports are credited in the changelog unless anonymity is requested.
 

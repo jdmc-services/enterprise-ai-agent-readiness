@@ -1,4 +1,4 @@
-﻿# Use Case: Contact Center Agent Assist
+# Use Case: Contact Center Agent Assist
 
 ## Business Problem
 
@@ -6,14 +6,14 @@ Contact center agents operate under a harder constraint than most knowledge work
 
 ## Proposed Capability
 
-A **real-time agent-assist layer** integrated beside â€” not inside â€” the contact center platform:
+A **real-time agent-assist layer** integrated beside — not inside — the contact center platform:
 
-- **Live knowledge retrieval** â€” cited answers from approved sources, surfaced in-context during the interaction
-- **Real-time interaction summarization** â€” running summary that becomes the draft disposition note
-- **Suggested responses and next-best action** â€” recommendations the agent can use, adapt, or ignore
-- **After-call work automation** â€” draft notes and disposition codes for agent review and commit
-- **Quality and coaching signals** â€” interaction patterns surfaced to supervisors for coaching, never for automated discipline
-- **Structured human handoff** â€” full context transfers with the interaction; the customer never repeats themselves because of the AI
+- **Live knowledge retrieval** — cited answers from approved sources, surfaced in-context during the interaction
+- **Real-time interaction summarization** — running summary that becomes the draft disposition note
+- **Suggested responses and next-best action** — recommendations the agent can use, adapt, or ignore
+- **After-call work automation** — draft notes and disposition codes for agent review and commit
+- **Quality and coaching signals** — interaction patterns surfaced to supervisors for coaching, never for automated discipline
+- **Structured human handoff** — full context transfers with the interaction; the customer never repeats themselves because of the AI
 
 ## Non-Negotiable Architecture Requirements
 
@@ -26,7 +26,7 @@ A **real-time agent-assist layer** integrated beside â€” not inside â€�
 
 ## Healthcare and Regulated-Environment Considerations
 
-In healthcare-adjacent contact centers, the assist layer must respect the same boundary as the [Healthcare Administrative Agent](healthcare-administrative-agent.md): administrative support only â€” scheduling logistics, wayfinding, policy navigation, coverage questions routed appropriately â€” with hard exclusions on anything clinical. Minimum-necessary access applies to every retrieval scope.
+In healthcare-adjacent contact centers, the assist layer must respect the same boundary as the [Healthcare Administrative Agent](healthcare-administrative-agent.md): administrative support only — scheduling logistics, wayfinding, policy navigation, coverage questions routed appropriately — with hard exclusions on anything clinical. Minimum-necessary access applies to every retrieval scope.
 
 ## Risk Profile
 
@@ -36,20 +36,20 @@ In healthcare-adjacent contact centers, the assist layer must respect the same b
 
 | Metric | Direction | Notes |
 |---|---|---|
-| Average handle time | â†“ | Primary capacity metric |
-| Transfer rate | â†“ | Right answer at first agent |
-| First-contact resolution | â†‘ | Paired with repeat-call rate |
-| Average hold time | â†“ | Search time moved into the assist layer |
-| Abandonment rate | â†“ | Follows recovered availability |
-| After-call work | â†“ | Draft-note automation |
-| Quality scores | â†‘ / = | Must not degrade while speed improves |
-| Time to proficiency (new hires) | â†“ | Knowledge access replaces tribal knowledge |
-| Agent satisfaction / attrition signal | â†‘ | Adoption and retention leading indicator |
+| Average handle time | ↓ | Primary capacity metric |
+| Transfer rate | ↓ | Right answer at first agent |
+| First-contact resolution | ↑ | Paired with repeat-call rate |
+| Average hold time | ↓ | Search time moved into the assist layer |
+| Abandonment rate | ↓ | Follows recovered availability |
+| After-call work | ↓ | Draft-note automation |
+| Quality scores | ↑ / = | Must not degrade while speed improves |
+| Time to proficiency (new hires) | ↓ | Knowledge access replaces tribal knowledge |
+| Agent satisfaction / attrition signal | ↑ | Adoption and retention leading indicator |
 
 ## Pilot Design
 
-- **Cohort:** one line of business or queue, 10â€“20 agents, mixed tenure, matched control group where feasible
-- **Duration:** 60â€“90 days against a 30-day baseline
+- **Cohort:** one line of business or queue, 10–20 agents, mixed tenure, matched control group where feasible
+- **Duration:** 60–90 days against a 30-day baseline
 - **Phasing:** knowledge + summarization first; disposition drafting second; any workflow execution only after re-scored risk review
 - **Exit:** scored against pre-committed [Pilot Success Criteria](../05-measurement/pilot-success-criteria.md)
 
