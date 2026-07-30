@@ -1,0 +1,17 @@
+flowchart TB
+    subgraph VERIFY[Verify Explicitly]
+        V1[User + agent<br/>authentication] --> V2[Conditional access<br/>device + session]
+        V2 --> V3[Step-up auth for<br/>privileged approvals]
+    end
+    subgraph LP[Least Privilege]
+        L1[Separate read /<br/>write identities] --> L2[Enumerated<br/>connector scopes]
+        L2 --> L3[Short-lived<br/>credentials]
+    end
+    subgraph AB[Assume Breach]
+        B1[Retrieved content<br/>= untrusted input] --> B2[Injection defenses<br/>+ segmentation]
+        B2 --> B3[Kill switch<br/>tested per tier]
+    end
+    VERIFY --> AGENT[AI Agent<br/>nonhuman identity]
+    LP --> AGENT
+    AB --> AGENT
+    AGENT --> LOG[Full-path logging<br/>to SIEM]

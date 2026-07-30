@@ -1,5 +1,7 @@
 {
   "repository_name": "enterprise-ai-agent-readiness",
+  "version": "2.0",
+  "description": "Vendor-neutral enterprise AI agent readiness framework for regulated environments",
   "generated_files": [
     ".github/ISSUE_TEMPLATE/risk-review.md",
     ".github/ISSUE_TEMPLATE/use-case-request.md",
@@ -24,10 +26,9 @@
     "05-measurement/roi-model.md",
     "06-workforce-enablement/adoption-checklist.md",
     "06-workforce-enablement/training-plan.md",
-    "07-partnership-positioning/conflict-of-interest-boundary.md",
-    "07-partnership-positioning/independent-opportunities.md",
-    "07-partnership-positioning/kore-ai-meeting-brief.md",
-    "07-partnership-positioning/value-proposition.md",
+    "07-advisory-engagement/advisory-approach.md",
+    "07-advisory-engagement/engagement-ethics.md",
+    "07-advisory-engagement/service-offerings.md",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE",
@@ -36,6 +37,7 @@
     "START-HERE.md",
     "diagrams/agent-assist-architecture.mmd",
     "diagrams/governance-lifecycle.mmd",
+    "diagrams/zero-trust-control-plane.mmd",
     "scripts/build-repository.ps1",
     "scripts/publish-to-github.ps1",
     "scripts/validate-repository.ps1"

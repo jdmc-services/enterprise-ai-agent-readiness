@@ -1,21 +1,25 @@
 ---
-name: AI risk review
-about: Request a governance and security review
-title: "[RISK REVIEW] "
-labels: risk
-assignees: ''
+name: Risk Review
+about: Report a gap, error, or improvement in a control, risk method, or security guidance
+labels: risk-review
 ---
 
-## Use case
+## Document and Section
 
-## Data classification
+<!-- File path and heading -->
 
-## Agent autonomy
+## Concern
 
-## Tools and integrations
+<!-- What is wrong, missing, or weaker than it should be -->
 
-## Key risks
+## Scenario Where It Matters
 
-## Required controls
+<!-- The realistic situation in which this gap causes harm -->
 
-## Approval owners
+## Suggested Change
+
+<!-- Proposed control, wording, or threshold — practitioner evidence welcome -->
+
+## Environment Class (optional)
+
+<!-- e.g., healthcare, financial services, public sector — do not identify any organization -->

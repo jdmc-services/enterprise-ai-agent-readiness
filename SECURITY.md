@@ -2,27 +2,16 @@
 
 ## Scope
 
-This repository contains templates, reference architectures, and governance guidance. It does not contain production credentials, sensitive business data, protected health information, or customer-confidential information.
+This repository contains a documentation framework — templates, control matrices, architecture patterns, and methodology. It ships no executable application code beyond repository-management PowerShell scripts, which perform only local file operations and standard `git`/`gh` commands.
 
-## Reporting a Security Concern
+## Reporting
 
-Do not open a public issue containing sensitive information. Report concerns privately to the repository owner.
+If you identify a security concern — an error in a control recommendation, a flaw in the reference architecture, or an issue in the scripts — open a GitHub issue using the **Risk Review** template, or contact the maintainer privately through the repository profile for anything sensitive.
 
-## Prohibited Content
+Please include: the file and section, the concern, and the scenario in which it matters. Substantive control-gap reports are credited in the changelog unless anonymity is requested.
 
-Do not commit:
+## Commitments
 
-- Passwords
-- API keys
-- Tokens
-- Connection strings
-- Real patient data
-- Real employee data
-- Internal architecture diagrams
-- Vendor-confidential material
-- Vulnerability details from a production environment
-- Proprietary implementation code belonging to another organization
-
-## Safe Demonstration Standard
-
-All examples must use synthetic data and fictional organization names.
+- Reports acknowledged within 5 business days
+- Confirmed control-guidance errors corrected with a noted revision, not silently edited
+- No content in this repository describes any specific organization's environment; findings about real environments belong in those organizations' own disclosure processes

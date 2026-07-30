@@ -1,12 +1,22 @@
 flowchart LR
-    U[End User or Analyst] --> CH[Approved Channel]
-    CH --> ID[Identity and Conditional Access]
-    ID --> ORCH[AI Agent Orchestrator]
-    ORCH --> POL[Policy and Guardrails]
-    POL --> RAG[Permission-Aware Retrieval]
-    RAG --> SP[SharePoint and Approved Knowledge]
-    POL --> TOOLS[Approved Tools]
-    TOOLS --> ITSM[IT Service Management]
-    TOOLS --> CC[Contact Center Platform]
-    ORCH --> HUMAN[Human Approval]
-    ORCH --> OBS[Audit, Monitoring, SIEM]
+    subgraph UX[User Experience]
+        U[Analyst or Agent] --> CH[Approved Channel<br/>ITSM console / CC desktop]
+    end
+    subgraph TRUST[Identity and Policy]
+        CH --> ID[Identity and<br/>Conditional Access]
+        ID --> ORCH[AI Agent<br/>Orchestrator]
+        ORCH --> POL[Policy Engine<br/>scopes, injection defense,<br/>output validation]
+    end
+    subgraph KNOW[Knowledge]
+        POL --> RAG[Permission-Aware<br/>Retrieval]
+        RAG --> KB[Approved Knowledge<br/>Sources]
+    end
+    subgraph ACT[Action]
+        POL --> TOOLS[Approved Tools<br/>parameter-restricted]
+        TOOLS --> ITSM[IT Service<br/>Management]
+        TOOLS --> CC[Contact Center<br/>Platform]
+    end
+    ORCH --> HUMAN[Human Approval<br/>step-up auth]
+    HUMAN --> TOOLS
+    ORCH --> OBS[Audit, Monitoring,<br/>SIEM]
+    RAG -. content treated as untrusted .-> POL

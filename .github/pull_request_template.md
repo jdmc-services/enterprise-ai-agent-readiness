@@ -1,17 +1,15 @@
-## Summary
+## What This Changes
 
-## Business impact
+<!-- One logical change per PR -->
 
-## Security impact
+## Why
 
-## Governance impact
+<!-- Problem solved or gap closed; practitioner evidence if available -->
 
-## Measurement impact
+## Checklist
 
-## Validation completed
-
-- [ ] Synthetic data only
-- [ ] No confidential information
-- [ ] Human oversight documented
-- [ ] Security controls documented
-- [ ] Metrics documented
+- [ ] Vendor-neutral — no platform promotion or assumption
+- [ ] Synthetic content only — no real organizational data or identifiable details
+- [ ] Follows existing structure (intake shape for use cases; threat-mapped for controls)
+- [ ] Tables/Mermaid render correctly in GitHub preview
+- [ ] Internal links resolve

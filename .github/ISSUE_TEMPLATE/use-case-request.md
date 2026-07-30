@@ -1,21 +1,25 @@
 ---
-name: AI use-case request
-about: Propose a new enterprise AI use case
-title: "[USE CASE] "
+name: Use Case Request
+about: Propose a new agent use-case pattern for the framework
 labels: use-case
-assignees: ''
 ---
 
-## Business problem
+## Operating Problem
 
-## Target users
+<!-- The business problem, in plain language — no platform names -->
 
-## Systems and data involved
+## Proposed Capability
 
-## Expected value
+<!-- What the agent would recommend, draft, retrieve, or execute -->
 
-## Risk considerations
+## Explicit Exclusions
 
-## Human oversight
+<!-- What the agent must never do in this pattern -->
 
-## Success measures
+## Expected Risk Signals
+
+<!-- Data sensitivity, autonomy, reversibility, regulated data -->
+
+## Metrics That Would Prove Value
+
+<!-- Measurable, baselineable -->

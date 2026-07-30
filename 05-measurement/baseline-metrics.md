@@ -1,39 +1,42 @@
 # Baseline Metrics
 
-## Help Desk
+No baseline, no pilot. Value claims made against memory, estimates, or vendor benchmarks are unfalsifiable — and unfalsifiable claims do not survive executive review. The baseline is a **30-day measured window** captured before any agent capability is enabled, using the same reporting sources that will measure the pilot.
 
-- Calls offered
-- Calls answered
-- Abandonment
-- Average speed of answer
-- Average handle time
-- After-call work
-- First-contact resolution
-- Ticket reassignment
-- Escalation
-- Knowledge utilization
-- Overtime
-- Analyst occupancy
+## Baseline Windows and Rules
 
-## Contact Center
+- **Window:** 30 consecutive days minimum; avoid atypical periods (major incidents, holidays, go-lives) or annotate them
+- **Source parity:** baseline and pilot metrics come from the same platform reports, same definitions, same filters
+- **Segmentation:** capture per-queue and per-team, not just aggregate — pilots run on segments
+- **Freeze definitions:** metric definitions are written down before the pilot and cannot change mid-flight
 
-- Calls offered
-- Calls handled
-- Average handle time
-- Transfer rate
-- Hold time
-- Abandonment
-- First-contact resolution
-- Quality score
-- Schedule adherence
-- Training time
+## Service Desk Baseline Set
 
-## Governance
+| Metric | Definition Frozen As | Source |
+|---|---|---|
+| Average handle time | | ITSM / telephony reporting |
+| First-contact resolution | | ITSM |
+| Reassignment rate | Reassignments ÷ resolved tickets | ITSM |
+| After-call work | | Telephony / WFM |
+| Abandonment rate | | Telephony |
+| Contact volume by channel | | Telephony / ITSM |
+| Knowledge-base usage rate | Tickets with KB link ÷ resolved | ITSM |
+| Overtime hours | | WFM / payroll |
+| Analyst satisfaction | Pre-pilot survey instrument | Survey |
 
-- Unsupported-answer rate
-- Human-approval rate
-- Unauthorized retrieval events
-- Security incidents
-- Policy exceptions
-- Agent disablement events
-- Audit completeness
+## Contact Center Baseline Set
+
+| Metric | Definition Frozen As | Source |
+|---|---|---|
+| Average handle time | | CC platform |
+| Transfer rate | | CC platform |
+| First-contact resolution / repeat-call rate | | CC platform + analytics |
+| Average hold time | | CC platform |
+| Abandonment rate | | CC platform |
+| After-call work | | CC platform / WFM |
+| Quality scores | Existing QM rubric, unchanged | QM |
+| Time to proficiency | Hire date → target-metric attainment | WFM / training records |
+| Agent satisfaction | Pre-pilot survey instrument | Survey |
+
+## Publication
+
+The baseline is published to stakeholders **before** the pilot starts. A baseline nobody saw until after the results is indistinguishable from a baseline fitted to the results.

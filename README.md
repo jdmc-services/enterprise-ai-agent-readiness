@@ -1,187 +1,84 @@
 # Enterprise AI Agent Readiness for Regulated Environments
 
-A vendor-neutral framework for evaluating, governing, securing, piloting, and measuring enterprise AI agents in regulated and mission-critical environments.
+A vendor-neutral framework for evaluating, governing, securing, piloting, and measuring enterprise AI agents in regulated and mission-critical environments — healthcare operations, IT service management, contact centers, and enterprise knowledge work.
 
-This repository positions **JDMc Services LLC** as an independent advisory and implementation partner focused on:
-
-- Enterprise AI readiness
-- AI agent governance
-- Zero-Trust architecture
-- Healthcare operations
-- IT service management
-- Contact-center transformation
-- Enterprise knowledge assistants
-- Workforce enablement
-- Risk-managed AI adoption
-
-> **Important:** All examples are synthetic, vendor-neutral, and designed for educational, advisory, and demonstration purposes. No employer-confidential, patient, customer, or proprietary operational data is included.
+> **Scope and integrity statement:** All content in this repository is synthetic, vendor-neutral, and created for advisory, educational, and demonstration purposes. It contains no employer-confidential information, no patient or customer data, no internal architecture, and no proprietary operational metrics from any organization.
 
 ---
 
-## Executive Value Proposition
+## Why This Framework Exists
 
-Enterprise AI initiatives frequently fail because organizations begin with tools instead of operating problems.
+Most enterprise AI initiatives fail for the same reason: organizations start with a tool and work backward to a problem. The result is ungoverned pilots, unmeasured value, unmanaged risk, and stalled adoption.
 
-This framework begins with five questions:
+This framework inverts that sequence. Every AI agent initiative is required to answer five questions — in order — before a platform decision is made:
 
-1. What business problem are we solving?
-2. What data and systems are involved?
-3. What risks are introduced?
-4. What human controls are required?
-5. How will value be measured?
+1. **Problem.** What operating problem are we solving, and who owns it?
+2. **Data and systems.** What data, integrations, and systems of record are involved?
+3. **Risk.** What new risks does the agent introduce, and how are they classified?
+4. **Human control.** What actions require human approval, and how is that enforced?
+5. **Value.** How will benefit be measured against a defensible baseline?
 
-The goal is to move from isolated AI experimentation to governed, measurable, production-ready adoption.
+The destination is not a demo. It is governed, measurable, production-ready adoption that survives a security review, a compliance audit, and a CFO conversation.
 
----
+## Who This Is For
 
-## Core Use Cases
+- **CIOs and IT executives** deciding whether and where AI agents belong in their operating environment
+- **Service management and contact center leaders** evaluating agent-assist capabilities without disrupting existing platforms
+- **CISOs and security architects** who need Zero-Trust controls extended to nonhuman identities and agent tool use
+- **Healthcare administrative and operations leaders** who must keep AI strictly on the nonclinical side of a hard boundary
+- **Program and finance leaders** who need pilots measured against baselines rather than vendor claims
 
-### 1. Help Desk Agent Assist
+## Framework Structure
 
-A governed AI assistant that helps service-desk analysts:
+| Section | Contents | Question Answered |
+|---|---|---|
+| [01 — Business Case](01-business-case/) | Use-case intake, value hypothesis, pilot scorecard | Is this worth doing? |
+| [02 — Architecture](02-architecture/) | Reference architecture, data-flow documentation, integration inventory | How does it fit the environment? |
+| [03 — Security & Governance](03-security-governance/) | Zero-Trust agent controls, risk assessment, human approval matrix, incident response | How is it controlled? |
+| [04 — Use Cases](04-use-cases/) | Help desk, contact center, healthcare administrative, enterprise knowledge | Where does it apply? |
+| [05 — Measurement](05-measurement/) | Baseline metrics, pilot success criteria, ROI model | Did it work? |
+| [06 — Workforce Enablement](06-workforce-enablement/) | Training plan, adoption checklist | Will people use it well? |
+| [07 — Advisory Engagement](07-advisory-engagement/) | Service offerings, advisory approach, engagement ethics | How is this delivered? |
 
-- Search approved knowledge sources
-- Summarize calls and tickets
-- Suggest classification and routing
-- Draft resolution notes
-- Identify missing knowledge
-- Recommend next actions
-- Escalate when confidence is low
-- Preserve the service-management platform as the system of record
+## Core Design Principles
 
-### 2. Contact Center Agent Assist
+**Governance precedes deployment.** No agent reaches users before risk classification, an approval matrix, and an incident-response path exist for it.
 
-A secure AI assistant that supports contact-center personnel by:
+**The system of record stays authoritative.** Agents recommend, draft, summarize, and route. Ticketing platforms, contact center platforms, EHR-adjacent administrative systems, and directories remain the source of truth. An agent never becomes a shadow system of record.
 
-- Retrieving approved knowledge
-- Summarizing interactions
-- Recommending responses
-- Reducing after-call work
-- Supporting quality monitoring
-- Preserving human control
-- Maintaining resilient fallback paths
+**Identity is the perimeter.** Every agent runs as a governed nonhuman identity with scoped, time-limited, auditable access. User-delegated permissions are preserved through the retrieval layer — an agent must never return content its user could not open directly.
 
-### 3. Enterprise Knowledge Assistant
+**Humans approve consequential actions.** Autonomy is granted by risk tier, not by default. The [Human Approval Matrix](03-security-governance/human-approval-matrix.md) makes the boundary explicit and auditable.
 
-A role-aware enterprise assistant that:
+**Value is measured, not asserted.** Every pilot begins with a 30-day baseline and ends with a scorecard against pre-committed success criteria. A pilot that cannot be measured cannot be approved.
 
-- Searches SharePoint and approved repositories
-- Preserves source permissions
-- Provides source citations
-- Detects unsupported answers
-- Applies data-classification controls
-- Logs retrieval and response activity
-- Defends against prompt injection
+**Vendor neutrality.** The framework evaluates any agent platform against the same controls, architecture requirements, and measurement discipline. Platform selection is an output of the framework, never an input.
 
-### 4. Healthcare Administrative Agent
+## How to Use This Repository
 
-A nonclinical use-case pattern for:
+**Evaluating a first use case?** Start with the [Use-Case Intake Template](01-business-case/use-case-intake-template.md), then run the [AI Risk Assessment](03-security-governance/ai-risk-assessment.md).
 
-- Administrative intake
-- Staff knowledge support
-- Scheduling assistance
-- Policy navigation
-- Service-request routing
-- Operational communications
+**Preparing a security review?** Start with [Zero-Trust Agent Controls](03-security-governance/zero-trust-agent-controls.md) and the [Reference Architecture](02-architecture/reference-architecture.md).
 
-This pattern intentionally avoids autonomous clinical decision-making.
+**Building the business case?** Start with the [ROI Model](05-measurement/roi-model.md) and [Baseline Metrics](05-measurement/baseline-metrics.md).
 
----
+**Planning a pilot?** Use [Pilot Success Criteria](05-measurement/pilot-success-criteria.md) and the [Pilot Scorecard](01-business-case/pilot-scorecard.md), and stage rollout with the [Adoption Checklist](06-workforce-enablement/adoption-checklist.md).
 
-## Repository Structure
+## Standards Alignment
 
-```text
-enterprise-ai-agent-readiness/
-├── README.md
-├── LICENSE
-├── SECURITY.md
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-├── .gitignore
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── use-case-request.md
-│   │   └── risk-review.md
-│   └── pull_request_template.md
-├── 01-business-case/
-├── 02-architecture/
-├── 03-security-governance/
-├── 04-use-cases/
-├── 05-measurement/
-├── 06-workforce-enablement/
-├── 07-partnership-positioning/
-├── diagrams/
-└── scripts/
-```
+The controls and methodology in this framework are designed to align with:
 
----
+- **NIST AI Risk Management Framework (AI RMF 1.0)** — risk identification, measurement, and governance functions
+- **NIST Cybersecurity Framework 2.0** — identify, protect, detect, respond, recover applied to agent infrastructure
+- **NIST SP 800-207 (Zero Trust Architecture)** — extended to nonhuman identities and agent tool use
+- **OWASP Top 10 for LLM Applications** — prompt injection, insecure output handling, excessive agency, and supply-chain risks
+- **ISO/IEC 42001** — AI management system structure
+- **HIPAA administrative context** — minimum-necessary access and the clinical/nonclinical boundary for healthcare administrative use cases
 
-## Pilot Method
+## About the Author
 
-Each pilot should be:
+This framework is maintained by **James D. McClain, MBA** — an enterprise IT leader with 20+ years across mission-critical healthcare infrastructure, cybersecurity, unified communications, service management, and contact center operations, combined with AI governance advisory work and technology workforce education. It reflects the operating reality of regulated environments: adoption succeeds when security, governance, measurement, and workforce readiness are designed in from the first conversation.
 
-- Low risk
-- Nonclinical where possible
-- Time bounded
-- Reversible
-- Measurable
-- Human supervised
-- Secure by design
-- Architecturally isolated
-- Supported by named business and technical owners
+## License
 
----
-
-## Zero-Trust Principles
-
-This framework applies Zero Trust to AI agents:
-
-- Verify explicitly
-- Use least privilege
-- Assume breach
-- Treat agents as nonhuman identities
-- Restrict tool access
-- Segment knowledge sources
-- Require human approval for higher-risk actions
-- Log every retrieval, tool call, output, and administrative change
-- Maintain emergency disablement and rollback capability
-
----
-
-## Intended Audience
-
-- CIOs and CTOs
-- CISOs
-- Enterprise architects
-- AI and innovation leaders
-- IT service-management leaders
-- Contact-center leaders
-- Healthcare operations leaders
-- Compliance and privacy leaders
-- Workforce and education partners
-- AI platform vendors and implementation partners
-
----
-
-## Independent Advisory Positioning
-
-This repository demonstrates the ability to connect:
-
-- Enterprise operations
-- AI platforms
-- Infrastructure
-- Cybersecurity
-- Governance
-- Service management
-- Contact centers
-- Workforce readiness
-- Business value
-
-The material may support advisory, assessment, implementation, training, or partnership discussions with enterprise AI platform providers, including Kore.ai, while remaining vendor-neutral.
-
----
-
-## Contact
-
-**JDMc Services LLC**  
-Enterprise AI Readiness | Infrastructure | Cybersecurity | Governance | Workforce Enablement
+Released under the [MIT License](LICENSE). Use it, adapt it, and improve it. Attribution appreciated.

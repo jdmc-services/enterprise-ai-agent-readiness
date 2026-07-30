@@ -1,10 +1,12 @@
 flowchart LR
-    A[Use-Case Intake] --> B[Risk Classification]
-    B --> C[Architecture and Data Review]
-    C --> D[Security and Privacy Review]
-    D --> E[Controlled Pilot]
-    E --> F[Measure]
-    F --> G[Approve, Revise, or Stop]
-    G --> H[Production Governance]
-    H --> I[Continuous Monitoring]
-    I --> B
+    A[Use-Case Intake<br/>problem + value hypothesis] --> B[Risk Classification<br/>scored, tiered]
+    B --> C[Architecture and<br/>Data-Flow Review]
+    C --> D[Security and<br/>Privacy Review]
+    D --> E[Controlled Pilot<br/>read-only first,<br/>30-day baseline]
+    E --> F[Measure vs.<br/>Pre-Committed Criteria]
+    F --> G{Decision}
+    G -->|Approve| H[Production<br/>tiered controls]
+    G -->|Revise| E
+    G -->|Stop| J[Documented Stop<br/>a governance success]
+    H --> I[Continuous Monitoring<br/>quarterly access review]
+    I -->|scope change or incident| B

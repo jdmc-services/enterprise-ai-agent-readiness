@@ -1,36 +1,30 @@
 # Value Hypothesis Template
 
-## Hypothesis
+A value hypothesis is a falsifiable claim: specific metrics, specific deltas, a specific window, measured from a specific baseline. If the pilot cannot prove it false, it cannot prove it true either.
 
-We believe that implementing a governed AI assistant for **[workflow]** will improve **[metric]** from **[baseline]** to **[target]** within **[time period]**, without increasing **[risk category]** beyond the approved threshold.
+## The Hypothesis Statement
 
-## Expected Benefits
+> If we deploy **[capability]** for **[population]**, then **[metric(s)]** will improve by **[quantified delta]** within **[window]**, measured against the 30-day baseline from **[source]**, without degrading **[protected metric — e.g., quality scores]**.
 
-- Productivity:
-- Quality:
-- Speed:
-- Experience:
-- Risk reduction:
-- Cost avoidance:
+Every bracket must be filled. "Improve efficiency" is not a hypothesis; "reduce after-call work by 20% for the pilot queue in 60 days without quality degradation" is.
 
-## Cost Categories
+## Supporting Detail
 
-- Platform licensing
-- Model consumption
-- Integration
-- Implementation
-- Security
-- Change management
-- Training
-- Support
-- Internal labor
+| Field | Entry |
+|---|---|
+| Primary metric and current baseline value | |
+| Secondary metrics | |
+| Protected metrics (must not degrade) | |
+| Benefit mechanism — *why* would the agent move this metric? | |
+| Annualized value if the hypothesis holds (per [ROI model](../05-measurement/roi-model.md)) | |
+| Confidence level and biggest assumption | |
 
-## Evidence Required
+## Falsification Conditions
 
-- Baseline metrics
-- Pilot metrics
-- User feedback
-- Error rate
-- Escalation rate
-- Security findings
-- Operational incidents
+State in advance what result would mean the hypothesis failed:
+
+- Primary metric moves less than: ___
+- Protected metric degrades by more than: ___
+- Adoption below: ___
+
+Writing these down before the pilot is what separates measurement from marketing.
