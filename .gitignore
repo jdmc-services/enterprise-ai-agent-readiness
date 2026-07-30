@@ -1,0 +1,20 @@
+# Secrets and environment files
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+secrets.*
+credentials.*
+
+# Local tooling
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated outputs
+output/
+dist/
+tmp/

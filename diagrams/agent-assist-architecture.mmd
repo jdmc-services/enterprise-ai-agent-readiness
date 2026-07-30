@@ -1,0 +1,12 @@
+flowchart LR
+    U[End User or Analyst] --> CH[Approved Channel]
+    CH --> ID[Identity and Conditional Access]
+    ID --> ORCH[AI Agent Orchestrator]
+    ORCH --> POL[Policy and Guardrails]
+    POL --> RAG[Permission-Aware Retrieval]
+    RAG --> SP[SharePoint and Approved Knowledge]
+    POL --> TOOLS[Approved Tools]
+    TOOLS --> ITSM[IT Service Management]
+    TOOLS --> CC[Contact Center Platform]
+    ORCH --> HUMAN[Human Approval]
+    ORCH --> OBS[Audit, Monitoring, SIEM]

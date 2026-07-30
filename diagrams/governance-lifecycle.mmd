@@ -1,0 +1,10 @@
+flowchart LR
+    A[Use-Case Intake] --> B[Risk Classification]
+    B --> C[Architecture and Data Review]
+    C --> D[Security and Privacy Review]
+    D --> E[Controlled Pilot]
+    E --> F[Measure]
+    F --> G[Approve, Revise, or Stop]
+    G --> H[Production Governance]
+    H --> I[Continuous Monitoring]
+    I --> B
