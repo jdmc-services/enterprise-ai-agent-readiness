@@ -19,7 +19,7 @@ The single close-out artifact for an agent pilot: one page a sponsor reads, one 
 | 2 | | | | | | Core |
 | 3 | | | | | | **Gate** |
 
-## Gate Review (pass/fail â€” any failure fails the pilot)
+## Gate Review (pass/fail -- any failure fails the pilot)
 
 - [ ] Quality metrics: no degradation
 - [ ] Citation integrity: 100% cited or declined
