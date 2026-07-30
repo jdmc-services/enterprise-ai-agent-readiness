@@ -1,6 +1,6 @@
-# Zero-Trust Controls for AI Agents
+﻿# Zero-Trust Controls for AI Agents
 
-AI agents are nonhuman identities with tool access, data reach, and the ability to act. Zero-Trust principles (NIST SP 800-207) apply to them fully — and in several places more strictly than to human users, because agents operate at machine speed, follow instructions embedded in the content they read, and cannot be held accountable the way a person can.
+AI agents are nonhuman identities with tool access, data reach, and the ability to act. Zero-Trust principles (NIST SP 800-207) apply to them fully â€” and in several places more strictly than to human users, because agents operate at machine speed, follow instructions embedded in the content they read, and cannot be held accountable the way a person can.
 
 ## Threat Model
 
@@ -18,28 +18,28 @@ The controls below are designed against these primary threats, mapped to the OWA
 
 ## Verify Explicitly
 
-- Authenticate **every** user and **every** agent — no anonymous invocation paths
+- Authenticate **every** user and **every** agent â€” no anonymous invocation paths
 - Validate device and session context through conditional access before agent access is granted
 - Preserve source-system authorization on every retrieval; the agent inherits the user's permissions, never substitutes its own
-- Require step-up authentication for privileged actions, applied to the human approver — the agent cannot satisfy its own step-up
+- Require step-up authentication for privileged actions, applied to the human approver â€” the agent cannot satisfy its own step-up
 - Treat agent identity as first-class: registered, owned, inventoried, and attestable
 
 ## Least Privilege
 
-- Separate read and write identities — a retrieval agent and an action-taking agent are never the same principal
+- Separate read and write identities â€” a retrieval agent and an action-taking agent are never the same principal
 - Scope connectors to named, approved resources; no tenant-wide or org-wide grants
-- Restrict tool parameters server-side (allowed values, targets, and ranges) — never rely on the model to self-limit
+- Restrict tool parameters server-side (allowed values, targets, and ranges) â€” never rely on the model to self-limit
 - Use short-lived, automatically rotated credentials; no static secrets in agent configuration
 - Review nonhuman identities on a fixed cadence with a named owner per agent; orphaned agents are disabled, not grandfathered
 - Grant autonomy by risk tier per the [Human Approval Matrix](human-approval-matrix.md), never by default
 
 ## Assume Breach
 
-- Treat **all retrieved content as untrusted input** — documents are data to be summarized, never instructions to be followed
+- Treat **all retrieved content as untrusted input** â€” documents are data to be summarized, never instructions to be followed
 - Defend against direct and indirect prompt injection with layered controls: input filtering, retrieval-content isolation, output validation, and action confirmation
-- Segment agents from each other and from tools — compromise of one agent must not cascade
+- Segment agents from each other and from tools â€” compromise of one agent must not cascade
 - Monitor for anomalous retrieval patterns, tool-use spikes, off-hours activity, and scope-probing behavior
-- Maintain a tested **kill switch** per agent and per connector — disabling an agent must take minutes, not a change window
+- Maintain a tested **kill switch** per agent and per connector â€” disabling an agent must take minutes, not a change window
 - Test rollback and recovery for every write path an agent touches before that write path is enabled
 - Cap consumption with hard budget and rate limits; alert on anomalies
 
@@ -69,3 +69,4 @@ A go-live checklist derived from these controls:
 5. Kill switch executed end-to-end in a live drill
 6. Logs verified end-to-end in SIEM with attribution to user, agent, and action
 7. Rollback executed successfully for every enabled write path
+

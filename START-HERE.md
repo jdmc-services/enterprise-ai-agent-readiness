@@ -1,15 +1,15 @@
-# Start Here
+﻿# Start Here
 
 ## What This Is
 
 A vendor-neutral framework for taking enterprise AI agents from idea to governed, measured production in regulated environments. If you're reading this on GitHub, the [README](README.md) explains the structure; the fastest useful entry points are:
 
-| You are… | Start with |
+| You areâ€¦ | Start with |
 |---|---|
-| Evaluating a first use case | [Use-Case Intake](01-business-case/use-case-intake-template.md) → [Risk Assessment](03-security-governance/ai-risk-assessment.md) |
-| Preparing a security review | [Zero-Trust Agent Controls](03-security-governance/zero-trust-agent-controls.md) → [Reference Architecture](02-architecture/reference-architecture.md) |
-| Building the business case | [ROI Model](05-measurement/roi-model.md) → [Baseline Metrics](05-measurement/baseline-metrics.md) |
-| Designing a pilot | [Pilot Success Criteria](05-measurement/pilot-success-criteria.md) → [Adoption Checklist](06-workforce-enablement/adoption-checklist.md) |
+| Evaluating a first use case | [Use-Case Intake](01-business-case/use-case-intake-template.md) â†’ [Risk Assessment](03-security-governance/ai-risk-assessment.md) |
+| Preparing a security review | [Zero-Trust Agent Controls](03-security-governance/zero-trust-agent-controls.md) â†’ [Reference Architecture](02-architecture/reference-architecture.md) |
+| Building the business case | [ROI Model](05-measurement/roi-model.md) â†’ [Baseline Metrics](05-measurement/baseline-metrics.md) |
+| Designing a pilot | [Pilot Success Criteria](05-measurement/pilot-success-criteria.md) â†’ [Adoption Checklist](06-workforce-enablement/adoption-checklist.md) |
 
 ## Local Setup (for maintainers)
 
@@ -33,7 +33,7 @@ gh auth login
 gh auth status
 ```
 
-Then publish (private first is recommended — review on GitHub, then flip to public):
+Then publish (private first is recommended â€” review on GitHub, then flip to public):
 
 ```powershell
 .\scripts\publish-to-github.ps1 -GitHubOrg "<your-org-or-username>" -Private
@@ -60,3 +60,4 @@ Then publish (private first is recommended — review on GitHub, then flip to pu
 - [ ] No employer names, internal architecture, internal metrics, or confidential information anywhere
 - [ ] Mermaid diagrams render correctly on GitHub
 - [ ] Repository description and topics set
+

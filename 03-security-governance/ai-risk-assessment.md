@@ -1,10 +1,10 @@
-# AI Risk Assessment
+﻿# AI Risk Assessment
 
 A structured, repeatable method for classifying AI agent use cases before any platform work begins. Aligned with the NIST AI Risk Management Framework: the output of this assessment drives the control tier in the [Zero-Trust Control Matrix](zero-trust-agent-controls.md) and the autonomy boundary in the [Human Approval Matrix](human-approval-matrix.md).
 
 ## Scoring Method
 
-Score each category **1 (lowest risk) to 5 (highest risk)**. Every score requires a written rationale — an unexplained score is an unassessed risk. The assessment is performed jointly by the use-case owner, security, and (where applicable) privacy/compliance, and is re-run on **any** scope change.
+Score each category **1 (lowest risk) to 5 (highest risk)**. Every score requires a written rationale â€” an unexplained score is an unassessed risk. The assessment is performed jointly by the use-case owner, security, and (where applicable) privacy/compliance, and is re-run on **any** scope change.
 
 | Risk Area | 1 (Low) looks like | 5 (High) looks like | Score | Rationale | Required Control |
 |---|---|---|---:|---|---|
@@ -21,19 +21,19 @@ Score each category **1 (lowest risk) to 5 (highest risk)**. Every score require
 
 | Total Score | Classification | Consequence |
 |---|---|---|
-| 8–12 | **Low** | Standard controls; team-level approval |
-| 13–20 | **Moderate** | Moderate control tier; security sign-off; human approval on writes |
-| 21–30 | **High** | High control tier; security + privacy/compliance sign-off; human approval on all actions; isolated deployment |
-| 31–40 | **Elevated** | Executive and risk-committee review before any pilot; presumption is *no* until controls prove otherwise |
+| 8â€“12 | **Low** | Standard controls; team-level approval |
+| 13â€“20 | **Moderate** | Moderate control tier; security sign-off; human approval on writes |
+| 21â€“30 | **High** | High control tier; security + privacy/compliance sign-off; human approval on all actions; isolated deployment |
+| 31â€“40 | **Elevated** | Executive and risk-committee review before any pilot; presumption is *no* until controls prove otherwise |
 
 Two overrides apply regardless of total score:
 
 - Any single category scored **5** elevates the use case at least one tier.
-- Any clinical, life-safety, or emergency-workflow adjacency is out of scope entirely — it does not enter this pipeline.
+- Any clinical, life-safety, or emergency-workflow adjacency is out of scope entirely â€” it does not enter this pipeline.
 
 ## Mandatory Questions
 
-These must be answered in writing before classification is final. "Unknown" is an answer — and it scores as a 5 until resolved.
+These must be answered in writing before classification is final. "Unknown" is an answer â€” and it scores as a 5 until resolved.
 
 1. Can the agent expose information the requesting user is not authorized to see? Through what path was this tested?
 2. Can the agent make, trigger, or materially influence a consequential decision?
@@ -41,12 +41,13 @@ These must be answered in writing before classification is final. "Unknown" is a
 4. Is a human available to intervene in real time, and do they know they are the control?
 5. Is every action attributable to a user, an agent identity, and a timestamp in a log a third party could audit?
 6. What happens to the dependent business process when the agent is unavailable for a day?
-7. Who owns this agent — by name — and who reviews its access on what cadence?
+7. Who owns this agent â€” by name â€” and who reviews its access on what cadence?
 
 ## Reassessment Triggers
 
 - Any new connector, data source, or tool
 - Any move from recommend to execute on any action
-- Any change in user population (e.g., staff-only → customer-facing)
+- Any change in user population (e.g., staff-only â†’ customer-facing)
 - Any incident involving the agent, regardless of severity
 - Annual review at minimum, with the named owner accountable
+

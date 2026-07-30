@@ -1,4 +1,4 @@
-# Kore.ai Meeting Brief
+﻿# enterprise AI platform providers Meeting Brief
 
 ## Positioning Statement
 
@@ -6,7 +6,7 @@ My value is the ability to connect enterprise AI platforms to real operating env
 
 ## Meeting Objectives
 
-1. Understand why Kore.ai requested the meeting.
+1. Understand why enterprise AI platform providers requested the meeting.
 2. Determine whether interest extends beyond one employer.
 3. Identify a formal advisory, partner, implementation, or employment path.
 4. Clarify commercial structure.
@@ -14,9 +14,9 @@ My value is the ability to connect enterprise AI platforms to real operating env
 
 ## Five Questions
 
-1. What specifically about my background led Kore.ai to request this meeting?
+1. What specifically about my background led enterprise AI platform providers to request this meeting?
 2. Where do you see my greatest value beyond access to one healthcare organization?
-3. Would Kore.ai view me as an adviser, solutions consultant, implementation partner, channel partner, or potential employee?
+3. Would enterprise AI platform providers view me as an adviser, solutions consultant, implementation partner, channel partner, or potential employee?
 4. What would the formal engagement and compensation model look like?
 5. What opportunity can we test within 30 to 60 days that does not depend entirely on my employer?
 
@@ -30,3 +30,4 @@ My value is the ability to connect enterprise AI platforms to real operating env
 - Workforce education
 - Executive communication
 - Vendor-neutral advisory
+

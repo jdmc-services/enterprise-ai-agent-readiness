@@ -1,6 +1,6 @@
-# Enterprise AI Agent Readiness for Regulated Environments
+﻿# Enterprise AI Agent Readiness for Regulated Environments
 
-A vendor-neutral framework for evaluating, governing, securing, piloting, and measuring enterprise AI agents in regulated and mission-critical environments — healthcare operations, IT service management, contact centers, and enterprise knowledge work.
+A vendor-neutral framework for evaluating, governing, securing, piloting, and measuring enterprise AI agents in regulated and mission-critical environments â€” healthcare operations, IT service management, contact centers, and enterprise knowledge work.
 
 > **Scope and integrity statement:** All content in this repository is synthetic, vendor-neutral, and created for advisory, educational, and demonstration purposes. It contains no employer-confidential information, no patient or customer data, no internal architecture, and no proprietary operational metrics from any organization.
 
@@ -10,7 +10,7 @@ A vendor-neutral framework for evaluating, governing, securing, piloting, and me
 
 Most enterprise AI initiatives fail for the same reason: organizations start with a tool and work backward to a problem. The result is ungoverned pilots, unmeasured value, unmanaged risk, and stalled adoption.
 
-This framework inverts that sequence. Every AI agent initiative is required to answer five questions — in order — before a platform decision is made:
+This framework inverts that sequence. Every AI agent initiative is required to answer five questions â€” in order â€” before a platform decision is made:
 
 1. **Problem.** What operating problem are we solving, and who owns it?
 2. **Data and systems.** What data, integrations, and systems of record are involved?
@@ -32,13 +32,13 @@ The destination is not a demo. It is governed, measurable, production-ready adop
 
 | Section | Contents | Question Answered |
 |---|---|---|
-| [01 — Business Case](01-business-case/) | Use-case intake, value hypothesis, pilot scorecard | Is this worth doing? |
-| [02 — Architecture](02-architecture/) | Reference architecture, data-flow documentation, integration inventory | How does it fit the environment? |
-| [03 — Security & Governance](03-security-governance/) | Zero-Trust agent controls, risk assessment, human approval matrix, incident response | How is it controlled? |
-| [04 — Use Cases](04-use-cases/) | Help desk, contact center, healthcare administrative, enterprise knowledge | Where does it apply? |
-| [05 — Measurement](05-measurement/) | Baseline metrics, pilot success criteria, ROI model | Did it work? |
-| [06 — Workforce Enablement](06-workforce-enablement/) | Training plan, adoption checklist | Will people use it well? |
-| [07 — Advisory Engagement](07-advisory-engagement/) | Service offerings, advisory approach, engagement ethics | How is this delivered? |
+| [01 â€” Business Case](01-business-case/) | Use-case intake, value hypothesis, pilot scorecard | Is this worth doing? |
+| [02 â€” Architecture](02-architecture/) | Reference architecture, data-flow documentation, integration inventory | How does it fit the environment? |
+| [03 â€” Security & Governance](03-security-governance/) | Zero-Trust agent controls, risk assessment, human approval matrix, incident response | How is it controlled? |
+| [04 â€” Use Cases](04-use-cases/) | Help desk, contact center, healthcare administrative, enterprise knowledge | Where does it apply? |
+| [05 â€” Measurement](05-measurement/) | Baseline metrics, pilot success criteria, ROI model | Did it work? |
+| [06 â€” Workforce Enablement](06-workforce-enablement/) | Training plan, adoption checklist | Will people use it well? |
+| [07 â€” Advisory Engagement](07-advisory-engagement/) | Service offerings, advisory approach, engagement ethics | How is this delivered? |
 
 ## Core Design Principles
 
@@ -46,7 +46,7 @@ The destination is not a demo. It is governed, measurable, production-ready adop
 
 **The system of record stays authoritative.** Agents recommend, draft, summarize, and route. Ticketing platforms, contact center platforms, EHR-adjacent administrative systems, and directories remain the source of truth. An agent never becomes a shadow system of record.
 
-**Identity is the perimeter.** Every agent runs as a governed nonhuman identity with scoped, time-limited, auditable access. User-delegated permissions are preserved through the retrieval layer — an agent must never return content its user could not open directly.
+**Identity is the perimeter.** Every agent runs as a governed nonhuman identity with scoped, time-limited, auditable access. User-delegated permissions are preserved through the retrieval layer â€” an agent must never return content its user could not open directly.
 
 **Humans approve consequential actions.** Autonomy is granted by risk tier, not by default. The [Human Approval Matrix](03-security-governance/human-approval-matrix.md) makes the boundary explicit and auditable.
 
@@ -68,17 +68,18 @@ The destination is not a demo. It is governed, measurable, production-ready adop
 
 The controls and methodology in this framework are designed to align with:
 
-- **NIST AI Risk Management Framework (AI RMF 1.0)** — risk identification, measurement, and governance functions
-- **NIST Cybersecurity Framework 2.0** — identify, protect, detect, respond, recover applied to agent infrastructure
-- **NIST SP 800-207 (Zero Trust Architecture)** — extended to nonhuman identities and agent tool use
-- **OWASP Top 10 for LLM Applications** — prompt injection, insecure output handling, excessive agency, and supply-chain risks
-- **ISO/IEC 42001** — AI management system structure
-- **HIPAA administrative context** — minimum-necessary access and the clinical/nonclinical boundary for healthcare administrative use cases
+- **NIST AI Risk Management Framework (AI RMF 1.0)** â€” risk identification, measurement, and governance functions
+- **NIST Cybersecurity Framework 2.0** â€” identify, protect, detect, respond, recover applied to agent infrastructure
+- **NIST SP 800-207 (Zero Trust Architecture)** â€” extended to nonhuman identities and agent tool use
+- **OWASP Top 10 for LLM Applications** â€” prompt injection, insecure output handling, excessive agency, and supply-chain risks
+- **ISO/IEC 42001** â€” AI management system structure
+- **HIPAA administrative context** â€” minimum-necessary access and the clinical/nonclinical boundary for healthcare administrative use cases
 
 ## About the Author
 
-This framework is maintained by **James D. McClain, MBA** — an enterprise IT leader with 20+ years across mission-critical healthcare infrastructure, cybersecurity, unified communications, service management, and contact center operations, combined with AI governance advisory work and technology workforce education. It reflects the operating reality of regulated environments: adoption succeeds when security, governance, measurement, and workforce readiness are designed in from the first conversation.
+This framework is maintained by **James D. McClain, MBA** â€” an enterprise IT leader with 20+ years across mission-critical healthcare infrastructure, cybersecurity, unified communications, service management, and contact center operations, combined with AI governance advisory work and technology workforce education. It reflects the operating reality of regulated environments: adoption succeeds when security, governance, measurement, and workforce readiness are designed in from the first conversation.
 
 ## License
 
 Released under the [MIT License](LICENSE). Use it, adapt it, and improve it. Attribution appreciated.
+

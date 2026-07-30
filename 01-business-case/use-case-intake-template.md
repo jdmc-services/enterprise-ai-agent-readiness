@@ -1,4 +1,4 @@
-# Use-Case Intake Template
+﻿# Use-Case Intake Template
 
 Every AI agent idea enters through this template. Its job is to force clarity before enthusiasm: a use case that cannot complete intake is not ready for a platform conversation.
 
@@ -9,14 +9,14 @@ Every AI agent idea enters through this template. Its job is to force clarity be
 | Operating problem, in one sentence | |
 | Who feels this problem daily (role, team, volume) | |
 | Business owner (named individual, not a department) | |
-| What it costs today (time, money, quality, risk — estimated is fine, labeled as estimated) | |
+| What it costs today (time, money, quality, risk â€” estimated is fine, labeled as estimated) | |
 | What has already been tried | |
 
 ## 2. The Proposed Capability
 
 | Field | Entry |
 |---|---|
-| What the agent would do (recommend / draft / retrieve / execute — be precise) | |
+| What the agent would do (recommend / draft / retrieve / execute â€” be precise) | |
 | What the agent explicitly would NOT do | |
 | Who interacts with it, in what channel | |
 | What "good" looks like in the first 90 days | |
@@ -37,7 +37,7 @@ Every AI agent idea enters through this template. Its job is to force clarity be
 - [ ] Regulated or restricted data in scope
 - [ ] Irreversible or hard-to-reverse actions possible
 - [ ] External connectivity required
-- [ ] Anywhere near clinical, emergency, or life-safety workflows → **stop; out of scope**
+- [ ] Anywhere near clinical, emergency, or life-safety workflows â†’ **stop; out of scope**
 
 ## 5. Value Hypothesis
 
@@ -48,5 +48,6 @@ Complete the [Value Hypothesis Template](value-hypothesis-template.md). Intake i
 | Outcome | Meaning |
 |---|---|
 | Advance | Proceeds to risk assessment and architecture review |
-| Park | Real problem, not ready (data, owner, or baseline missing) — with named unblock conditions |
+| Park | Real problem, not ready (data, owner, or baseline missing) â€” with named unblock conditions |
 | Decline | Not a fit for agent capability; documented why |
+

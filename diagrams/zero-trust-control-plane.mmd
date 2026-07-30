@@ -1,4 +1,4 @@
-flowchart TB
+﻿flowchart TB
     subgraph VERIFY[Verify Explicitly]
         V1[User + agent<br/>authentication] --> V2[Conditional access<br/>device + session]
         V2 --> V3[Step-up auth for<br/>privileged approvals]
@@ -15,3 +15,4 @@ flowchart TB
     LP --> AGENT
     AB --> AGENT
     AGENT --> LOG[Full-path logging<br/>to SIEM]
+

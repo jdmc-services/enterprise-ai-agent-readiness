@@ -1,4 +1,4 @@
-# Independent Opportunities
+﻿# Independent Opportunities
 
 ## 1. Enterprise AI Readiness Assessment
 
@@ -55,3 +55,4 @@ Deliverables:
 - Security and governance
 - Role-based labs
 - Capstone
+

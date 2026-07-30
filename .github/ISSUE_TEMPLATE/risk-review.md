@@ -1,4 +1,4 @@
----
+﻿---
 name: Risk Review
 about: Report a gap, error, or improvement in a control, risk method, or security guidance
 labels: risk-review
@@ -18,8 +18,9 @@ labels: risk-review
 
 ## Suggested Change
 
-<!-- Proposed control, wording, or threshold — practitioner evidence welcome -->
+<!-- Proposed control, wording, or threshold â€” practitioner evidence welcome -->
 
 ## Environment Class (optional)
 
-<!-- e.g., healthcare, financial services, public sector — do not identify any organization -->
+<!-- e.g., healthcare, financial services, public sector â€” do not identify any organization -->
+

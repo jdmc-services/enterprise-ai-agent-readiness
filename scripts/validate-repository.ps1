@@ -1,4 +1,4 @@
-param(
+﻿param(
     [string]$Path = "$HOME\Documents\enterprise-ai-agent-readiness"
 )
 
@@ -56,3 +56,4 @@ if ($leaks.Count -gt 0) {
 }
 
 Write-Host "Validation passed: all required files present, no private material detected."
+

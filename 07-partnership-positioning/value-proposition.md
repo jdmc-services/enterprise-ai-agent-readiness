@@ -1,8 +1,8 @@
-# JDMc Services Value Proposition
+﻿# JDMcClain Value Proposition
 
 ## Market Position
 
-JDMc Services helps regulated and operationally complex organizations move from AI interest to secure, governed, measurable adoption.
+JDMcClain helps regulated and operationally complex organizations move from AI interest to secure, governed, measurable adoption.
 
 ## Differentiators
 
@@ -15,7 +15,7 @@ JDMc Services helps regulated and operationally complex organizations move from 
 - Executive-level translation
 - Vendor-neutral assessment methodology
 
-## Potential Kore.ai Roles
+## Potential enterprise AI platform providers Roles
 
 - Healthcare industry adviser
 - AI solutions consultant
@@ -25,3 +25,4 @@ JDMc Services helps regulated and operationally complex organizations move from 
 - Contact-center transformation adviser
 - AI governance specialist
 - Enterprise architecture adviser
+

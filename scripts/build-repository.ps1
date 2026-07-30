@@ -1,4 +1,4 @@
-param(
+﻿param(
     [string]$TargetPath = "$HOME\Documents\enterprise-ai-agent-readiness",
     [switch]$InitializeGit,
     [switch]$OpenFolder
@@ -46,3 +46,4 @@ Write-Host "2. Replace contact information if needed"
 Write-Host "3. Run git status"
 Write-Host "4. Create a GitHub repository named enterprise-ai-agent-readiness"
 Write-Host "5. Add the remote and push"
+

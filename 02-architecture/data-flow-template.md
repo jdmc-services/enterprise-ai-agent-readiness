@@ -1,6 +1,6 @@
-# Data-Flow Documentation Template
+﻿# Data-Flow Documentation Template
 
-Complete one per use case, before pilot. A use case whose data flows cannot be drawn cannot be risk-assessed — and will not pass a serious security or privacy review. This template is designed so the finished document answers an auditor's questions before they are asked.
+Complete one per use case, before pilot. A use case whose data flows cannot be drawn cannot be risk-assessed â€” and will not pass a serious security or privacy review. This template is designed so the finished document answers an auditor's questions before they are asked.
 
 ## 1. Flow Summary
 
@@ -44,7 +44,7 @@ flowchart LR
 
 - What is the most sensitive element that could appear in a model response?
 - What prevents the agent from returning content the user cannot access? How was this tested?
-- What does the flow look like during platform failure — where does in-flight data go?
+- What does the flow look like during platform failure â€” where does in-flight data go?
 
 ## 6. Sign-Off
 
@@ -53,3 +53,4 @@ flowchart LR
 | Use-case owner | | |
 | Security | | |
 | Privacy/Compliance (if regulated data) | | |
+
