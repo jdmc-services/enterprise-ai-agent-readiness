@@ -1,4 +1,6 @@
-# Enterprise AI Agent Readiness for Regulated Environments
+# The Secure Enterprise AI Readiness Playbook
+
+## Enterprise AI Agent Readiness for Regulated Environments
 
 **A vendor-neutral operating framework for evaluating, governing, securing, piloting, and measuring enterprise AI agents.**
 
