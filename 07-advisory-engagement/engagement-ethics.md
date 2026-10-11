@@ -1,10 +1,10 @@
 # Engagement Ethics and Independence
 
-Trust is the product. These commitments govern every advisory engagement and are shared with clients at the outset.
+Trust is the product. These proposed commitments are shared with clients at the outset and incorporated into the executed agreement.
 
 ## Independence
 
-- **Vendor neutrality is structural.** No compensation, commission, or consideration from any platform vendor whose selection an engagement could influence. Where a vendor relationship exists on unrelated work, it is disclosed in writing before the engagement begins.
+- **Vendor neutrality is structural.** The assessment methodology is vendor-neutral. Each engagement must document relevant vendor relationships, referral compensation, conflicts, and mitigation before recommendations are made. A vendor-independent advisory engagement excludes compensation contingent on its platform recommendation. Any separate referral, implementation, or partnership arrangement requires written scope and disclosure and must preserve employer boundaries. This policy does not assert that any such relationship currently exists.
 - **Recommendations trace to evidence.** Every platform-relevant finding maps to the framework's assessment criteria — reproducible by the client from their own data.
 
 ## Employer Separation
@@ -25,5 +25,5 @@ For any consultant who also holds an employed role, the boundary is absolute:
 - All examples in public materials are synthetic; no client is identifiable without written consent
 - Conflicts discovered mid-engagement are disclosed within one business day, with a proposed resolution or withdrawal
 
-These are not aspirations; they are engagement terms.
+These are proposed engagement commitments to be incorporated into the executed agreement.
 

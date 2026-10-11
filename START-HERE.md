@@ -10,6 +10,16 @@ It is a documentation and reference framework—not a deployable production syst
 
 ---
 
+## First Visit: A Short Reading Path
+
+1. Review the [Synthetic Worked Assessment](08-validation/synthetic-validation-case.md) to see the method in context. It reports no production pilot or independently validated outcome.
+2. Complete the [Use-Case Intake](01-business-case/use-case-intake-template.md) in an approved private workspace.
+3. Continue to risk classification, architecture, control evidence, and pilot criteria using the paths below.
+
+No installation or scripts are required to read or adapt the framework. Keep completed assessments and real organizational information out of this public repository.
+
+---
+
 ## Choose Your Starting Point
 
 | Your Objective                     | Start With                                                                                   | Continue To                                                                          |
@@ -52,6 +62,7 @@ It is a documentation and reference framework—not a deployable production syst
 * [06 — Workforce Enablement](06-workforce-enablement/)
 * [07 — Advisory Engagement](07-advisory-engagement/)
 * [Independent Partnership Positioning](07-partnership-positioning/)
+* [08 — Synthetic Worked Assessment](08-validation/synthetic-validation-case.md)
 * [Architecture and Governance Diagrams](diagrams/)
 * [Repository Scripts](scripts/)
 
@@ -61,26 +72,52 @@ The complete repository explanation is available in the [main README](README.md)
 
 ## Local Validation for Maintainers
 
-Open PowerShell in the repository directory and run:
+Maintainer utilities require PowerShell 7+; Git is required for inventory checks and optional local initialization. Only the publishing utility requires an authenticated GitHub CLI. Reading the framework requires none of these tools.
+
+From the repository root, run:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\validate-repository.ps1
+.\scripts\validate-repository.ps1 -Path .
 ```
 
-Before publishing with the GitHub CLI, confirm the active account:
+Run the script regression checks in a fresh PowerShell process:
+
+```powershell
+pwsh -NoProfile -File ./tests/test-repository-scripts.ps1
+```
+
+The checks use temporary synthetic repositories and mock every GitHub CLI operation; they do not authenticate, publish, or push. They briefly create an unlisted synthetic test file in the source checkout and remove it on exit.
+
+The validator checks the file inventory, configured forbidden paths, and local Markdown file targets. It does not certify privacy, scan Git history, validate external links, or test the proposed AI controls. Follow your approved PowerShell execution policy.
+
+The build utility copies only manifest-listed files, including repository dotfiles, without copying Git history or unrelated working files:
+
+```powershell
+.\scripts\build-repository.ps1 -TargetPath "<new-local-directory>"
+```
+
+It refuses overwrites unless `-Overwrite` is explicitly supplied. `-InitializeGit` initializes a local repository only; it does not stage, commit, or publish content.
+
+## Publishing a New Repository
+
+The publishing utility creates a new repository. It is not an update workflow for this existing repository. Use a branch and pull request for changes here.
+
+Publication requires a clean committed checkout with no existing remote, verified GitHub authentication, and a review of tracked files, ignored files, and the commit history. The utility does not stage or commit files. Never add completed client assessments to a public demonstration repository.
 
 ```powershell
 gh auth status
+git status --short --untracked-files=all
+git status --short --ignored
+git show --stat HEAD
 ```
 
-If using the included publishing script, review its parameters and target repository before execution:
+After review, preview the destination without publishing:
 
 ```powershell
-.\scripts\publish-to-github.ps1 -GitHubOrg "<your-username-or-organization>" -Private
+.\scripts\publish-to-github.ps1 -GitHubOrg "<your-username-or-organization>" -LocalPath . -Reviewed -WhatIf
 ```
 
-Review the private repository before changing its visibility to public.
+New repositories default to private. `-Public` is an explicit opt-in; `-Reviewed` records that you completed the review above. `-Private` remains available for compatibility. The script requests confirmation before its publishing operation. Review the private repository before considering public release.
 
 ---
 

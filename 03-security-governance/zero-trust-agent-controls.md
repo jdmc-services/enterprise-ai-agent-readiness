@@ -179,6 +179,10 @@ Risk tiers are assigned through the [AI Risk Assessment](ai-risk-assessment.md).
 
 ---
 
+## Applying Risk Tiers and Action Approvals
+
+Apply the highest requirement arising from the use-case risk tier, action-specific approval matrix, data classification, and organizational policy. Action labels are illustrative and do not lower the assessed use-case tier. High-risk consequential actions require explicit human approval; approved read-only activity remains subject to documented access and monitoring controls. Elevated cases require executive and risk-committee authorization before any pilot and use the High-tier controls as a minimum. Approval cannot authorize an action marked prohibited or agent execution marked No.
+
 ## Logging and Observability
 
 Logs should capture:

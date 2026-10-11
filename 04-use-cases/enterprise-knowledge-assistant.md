@@ -6,7 +6,7 @@ Give authorized users fast, cited answers from trusted enterprise knowledge — 
 
 ## The Permission-Preservation Principle
 
-The single most common enterprise knowledge-assistant failure is permission flattening: content is indexed under a privileged service identity, and the assistant returns information to users who could never have opened the source document. This is a data-exposure incident implemented as a feature.
+A significant enterprise knowledge-assistant failure mode is permission flattening: content is indexed under a privileged service identity, and the assistant returns information to users who could never have opened the source document. This is a data-exposure incident implemented as a feature.
 
 The control is structural: **retrieval executes in the user's security context** (user-delegated access wherever the platform supports it), and the assistant can only surface what the requesting user is already authorized to read. Where delegated access is not possible, index-level security trimming must replicate source ACLs and be re-validated on every permission change cycle.
 

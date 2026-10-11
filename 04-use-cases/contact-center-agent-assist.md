@@ -13,12 +13,12 @@ A **real-time agent-assist layer** integrated beside — not inside — the cont
 - **Suggested responses and next-best action** — recommendations the agent can use, adapt, or ignore
 - **After-call work automation** — draft notes and disposition codes for agent review and commit
 - **Quality and coaching signals** — interaction patterns surfaced to supervisors for coaching, never for automated discipline
-- **Structured human handoff** — full context transfers with the interaction; the customer never repeats themselves because of the AI
+- **Structured human handoff** — full context transfers with the interaction; aim to avoid repeated questions; verify context completeness and respect privacy and retention limits
 
 ## Non-Negotiable Architecture Requirements
 
 - **Telephony and routing remain untouched.** The assist layer consumes events; it does not sit in the media or signaling path.
-- **Resilient fallback.** Assist-layer failure degrades to standard operations instantly and invisibly to the caller.
+- **Resilient fallback.** Test that assist-layer failure falls back to standard operations within approved recovery objectives without interrupting the media or signaling path.
 - **No emergency-call automation.** Emergency and life-safety call flows are architecturally excluded from AI involvement.
 - **Recording and consent controls preserved.** The assist layer inherits, and never bypasses, existing recording, consent, and retention policy.
 - **Approved knowledge only.** Retrieval is scoped to governed sources with citation on every answer.

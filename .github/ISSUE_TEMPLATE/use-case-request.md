@@ -4,6 +4,9 @@ about: Propose a new agent use-case pattern for the framework
 labels: use-case
 ---
 
+> Public issue: use synthetic examples only. Do not submit credentials, confidential documents, real metrics, identifiable incidents, or sensitive operational details. See [Security Policy](https://github.com/jdmc-services/enterprise-ai-agent-readiness/blob/main/SECURITY.md) for private reporting guidance.
+
+
 ## Operating Problem
 
 <!-- The business problem, in plain language — no platform names -->

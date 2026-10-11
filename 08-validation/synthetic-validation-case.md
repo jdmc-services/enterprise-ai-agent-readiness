@@ -166,6 +166,8 @@ This public example demonstrates the framework and does not disclose a proprieta
 | Measurement readiness                   |            3 | Synthetic baselines and pilot criteria are defined; authoritative reporting must be confirmed |
 | **Total**                               | **22 of 40** | **55% illustrative readiness**                                                                |
 
+The 22/40 total is an illustrative sum of ordinal maturity ratings. The displayed 55% is not a probability of successful deployment, a validated readiness threshold, or an approval criterion. Domain-level gaps and mandatory controls govern the decision.
+
 ### Overall finding
 
 Northstar Services Cooperative is **not ready for unrestricted deployment**.
@@ -309,15 +311,17 @@ The pilot should:
 | First-contact resolution      |                61% |    At least 5-point improvement | Core       |
 | Ticket reassignment rate      |                14% | At least 10% relative reduction | Supporting |
 | Quality-review score          |                86% |                  No degradation | **Gate**   |
-| Citation integrity            |      Not available |          100% cited or declined | **Gate**   |
-| Permission integrity          |      Not validated |       Zero unauthorized returns | **Gate**   |
+| Citation integrity            |      Not available |          Every substantive answer cited or declined; source support reviewed | **Gate**   |
+| Permission integrity          |      Not validated |       Zero unauthorized returns observed in documented tests | **Gate**   |
 | High-severity AI incidents    |     Not applicable |                            Zero | **Gate**   |
 | Weekly active use             |     Not applicable |    At least 70% of pilot cohort | Core       |
 | Participant confidence        |   Pre-pilot survey |      Positive post-pilot change | Supporting |
 
-Any failed gate results in a stop or remediation decision regardless of productivity improvement.
+Any failed gate stops the active pilot regardless of productivity improvement. Remediation may be proposed, but restart requires corrective evidence and a new approval decision.
 
 ---
+
+Citation presence does not establish answer correctness. Before pilot launch, define claim-level source-support review, sampling coverage, evaluators, and pass/fail criteria. Record the permission-test population, negative cases, and limitations. Zero observed leaks is a test result, not a guarantee; maintain production monitoring and stop on any unauthorized return. Pilot performance targets are illustrative and must be approved for the selected use case before launch.
 
 ## 13. Pilot Boundaries
 
@@ -331,6 +335,8 @@ Any failed gate results in a stop or remediation decision regardless of producti
 * **Monitoring:** Daily technical review and weekly governance review
 * **Escalation:** Human support process remains authoritative
 * **Stop authority:** Business owner, security owner, or executive sponsor
+
+The executive statuses in this fictional case are illustrative recommendations, not approvals from a real sponsor.
 
 ### Stop conditions
 
@@ -351,6 +357,8 @@ The pilot must be paused immediately if:
 ## 14. Ninety-Day Implementation Roadmap
 
 ### Days 1–30: Govern and prepare
+
+* Capture the 30-day pre-pilot baseline from approved reporting sources; the values above are fictional placeholders.
 
 * Confirm executive sponsor and accountable owners.
 * Approve the use-case statement and exclusions.
@@ -420,14 +428,14 @@ The proposed use case addresses a measurable knowledge-retrieval problem and lim
 | Decision                              | Status                 |
 | ------------------------------------- | ---------------------- |
 | Unrestricted deployment               | Not approved           |
-| Controlled pilot preparation          | Conditionally approved |
+| Controlled pilot preparation          | Conditional recommendation |
 | Autonomous tool execution             | Not approved           |
 | Expansion to restricted data          | Not approved           |
 | Reassessment after control validation | Required               |
 
 ---
 
-## 16. Framework Validation Result
+## 16. Synthetic Walkthrough Result
 
 This synthetic exercise demonstrates that the Secure Enterprise AI Readiness Playbook can produce:
 
@@ -447,7 +455,7 @@ This synthetic exercise demonstrates that the Secure Enterprise AI Readiness Pla
 
 ### Validation conclusion
 
-The framework successfully converts an AI idea into a documented readiness decision.
+This synthetic walkthrough illustrates how the framework organizes an AI proposal into a documented assessment and conditional pilot-preparation recommendation. No production pilot, control-effectiveness test, measured outcome, or independent validation is reported.
 
 It does not assume that every AI opportunity should proceed. It requires organizations to connect value, architecture, security, governance, operations, workforce readiness, measurement, and human accountability before deployment.
 

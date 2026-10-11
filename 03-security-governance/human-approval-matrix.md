@@ -11,7 +11,7 @@ Autonomy is granted per action, by risk — never per agent, by default. This ma
 | Draft ticket work note | Low | Yes | Draft only | Analyst commits | Analyst |
 | Suggest classification/routing | Low | Yes | Suggest only | Analyst applies | Analyst |
 | Reclassify a ticket | Moderate | Yes | Limited | Yes | Analyst |
-| Draft customer-facing response | Moderate | Yes | Draft only | Yes | Agent/analyst |
+| Draft customer-facing response | Moderate | Yes | Draft only | Yes | Human contact-center agent or analyst |
 | Reset a standard account | Moderate | Yes | Conditional | Yes, with step-up auth | Analyst + policy gate |
 | Modify group membership / entitlements | High | Yes | No | Yes | Access management |
 | Modify production configuration | High | Yes | No | Yes | Change approval board |
@@ -20,6 +20,10 @@ Autonomy is granted per action, by risk — never per agent, by default. This ma
 | Communicate during an active incident | High | Draft only | No | Yes | Incident commander |
 | Provide clinical guidance | Prohibited | No | No | Not permitted | — |
 | Touch emergency/life-safety workflows | Prohibited | No | No | Not permitted | — |
+
+## Applying Risk Tiers and Action Approvals
+
+Apply the highest requirement arising from the use-case risk tier, action-specific approval matrix, data classification, and organizational policy. Action labels are illustrative and do not lower the assessed use-case tier. High-risk consequential actions require explicit human approval; approved read-only activity remains subject to documented access and monitoring controls. Elevated cases require executive and risk-committee authorization before any pilot and use the High-tier controls as a minimum. Approval cannot authorize an action marked prohibited or agent execution marked No.
 
 ## Rules of Operation
 

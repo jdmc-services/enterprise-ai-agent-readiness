@@ -10,6 +10,8 @@ This repository helps leaders move from AI interest to a defensible readiness de
 
 ---
 
+**First visit?** Read [Start Here](START-HERE.md), then review the [Synthetic Worked Assessment](08-validation/synthetic-validation-case.md). To begin your own assessment, complete the [Use-Case Intake](01-business-case/use-case-intake-template.md). No installation is required.
+
 ## Why This Framework Exists
 
 Enterprise AI adoption should not begin with a product demonstration. It should begin with a clearly owned operational problem, an approved data boundary, measurable success criteria, and enforceable human accountability.
@@ -87,6 +89,7 @@ This framework helps an organization produce:
 | [06 — Workforce Enablement](06-workforce-enablement/)   | Training plan and adoption checklist                                                       | Are employees prepared to use the capability responsibly?                         |
 | [07 — Advisory Engagement](07-advisory-engagement/)     | Advisory approach, service offerings, and engagement ethics                                | How can the framework support an independent engagement?                          |
 | [Partnership Positioning](07-partnership-positioning/)  | Independent opportunities, value proposition, meeting preparation, and conflict boundaries | How can opportunities be evaluated without compromising professional obligations? |
+| [08 — Synthetic Worked Assessment](08-validation/synthetic-validation-case.md) | Fictional assessment, scoring rationale, pilot conditions, and executive recommendation | How does the method organize a readiness decision? |
 | [Diagrams](diagrams/)                                   | Architecture, governance-lifecycle, and Zero-Trust control-plane diagrams                  | How do the framework components connect?                                          |
 | [Scripts](scripts/)                                     | Repository build, validation, and publishing utilities                                     | How can maintainers validate and reproduce the documentation package?             |
 
@@ -229,7 +232,7 @@ The framework is informed by the following standards and practitioner guidance:
 
 ## Repository Maturity
 
-**Status: Documentation framework and reference implementation**
+**Status: Documentation framework with reference architectures, templates, and a synthetic worked assessment.**
 
 This repository contains templates, decision tools, control matrices, architectural patterns, diagrams, and repository-management scripts.
 
@@ -293,4 +296,4 @@ All public work is independently developed and intentionally separated from conf
 
 Released under the [MIT License](LICENSE).
 
-Use, adapt, and improve the framework while preserving applicable attribution, privacy, security, and professional-ethics requirements.
+Use, adapt, and improve the framework under the MIT License, including its attribution requirements. Repository contribution rules and proposed engagement commitments do not add restrictions to that license; applicable privacy and confidentiality obligations remain separate.

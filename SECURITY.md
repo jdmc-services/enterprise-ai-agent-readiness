@@ -8,7 +8,11 @@ This repository contains a documentation framework — templates, control matric
 
 If you identify a security concern — an error in a control recommendation, a flaw in the reference architecture, or an issue in the scripts — open a GitHub issue using the **Risk Review** template, or contact the maintainer privately through the repository profile for anything sensitive.
 
-Please include: the file and section, the concern, and the scenario in which it matters. Substantive control-gap reports are credited in the changelog unless anonymity is requested.
+Please include: the file and section, the concern, and the scenario in which it matters. Substantive control-gap reports are linked from the corrective revision where appropriate; contributor attribution requires consent.
+
+## Safe Reporting
+
+Public issues must contain synthetic examples only. Do not submit credentials, confidential documents, identifiable incidents, or sensitive operational details. For sensitive reports, use a private contact channel linked from the maintainer profile and initially provide only the affected file and a non-sensitive summary. Do not include sensitive attachments in the initial message.
 
 ## Commitments
 

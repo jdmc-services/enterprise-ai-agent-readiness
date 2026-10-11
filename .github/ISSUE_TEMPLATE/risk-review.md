@@ -4,6 +4,9 @@ about: Report a gap, error, or improvement in a control, risk method, or securit
 labels: risk-review
 ---
 
+> Public issue: use synthetic examples only. Do not submit credentials, confidential documents, real metrics, identifiable incidents, or sensitive operational details. See [Security Policy](https://github.com/jdmc-services/enterprise-ai-agent-readiness/blob/main/SECURITY.md) for private reporting guidance.
+
+
 ## Document and Section
 
 <!-- File path and heading -->

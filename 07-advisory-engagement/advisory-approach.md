@@ -20,5 +20,5 @@
 - Written deliverables that stand alone — usable after the engagement ends, by people who weren't in the room
 - Direct findings, including unwelcome ones; a stopped bad pilot is a delivered outcome
 - Fixed scopes with named exit decisions
-- Full independence from platform vendors — compensation never depends on which product is selected
+- A vendor-neutral assessment method with disclosed relationships and conflicts; vendor-independent advisory work excludes compensation contingent on its platform recommendation, as documented in the executed agreement
 
