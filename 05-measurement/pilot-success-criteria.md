@@ -12,13 +12,15 @@ Each criterion specifies: the metric, the baseline value, the target delta, the 
 | 2 | First-contact resolution | (measured) | ≥ 5 pt improvement | Platform reporting | Core |
 | 3 | After-call work | (measured) | ≥ 20% reduction | Platform reporting | Core |
 | 4 | Quality scores | (measured) | No degradation | Existing QM rubric | **Gate** |
-| 5 | Answer citation integrity | — | 100% of answers cited or declined | Sampled audit | **Gate** |
-| 6 | Permission integrity | — | Zero unauthorized returns | Adversarial testing | **Gate** |
+| 5 | Answer citation integrity | — | Every substantive answer cited or declined; source support reviewed | Sampled audit | **Gate** |
+| 6 | Permission integrity | — | Zero unauthorized returns observed in documented tests | Adversarial testing | **Gate** |
 | 7 | User adoption | — | ≥ 70% weekly active use in cohort | Platform telemetry | Core |
 | 8 | User satisfaction | Pre-survey | Positive shift | Post-survey | Supporting |
 | 9 | Incident count attributable to agent | — | Zero high-severity | IR records | **Gate** |
 
 **Gates are pass/fail.** A pilot that beats every performance target but fails a gate — quality degradation, a permission leak, a high-severity incident — has failed. Speed obtained by sacrificing integrity is not a capability; it is a liability with good metrics.
+
+Citation presence does not establish answer correctness. Before pilot launch, define claim-level source-support review, sampling coverage, evaluators, and pass/fail criteria. Record the permission-test population, negative cases, and limitations. Zero observed leaks is a test result, not a guarantee; maintain production monitoring and stop on any unauthorized return. Pilot performance targets are illustrative and must be approved for the selected use case before launch.
 
 ## Decision Framework
 

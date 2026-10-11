@@ -35,7 +35,7 @@ These are design constraints, not configuration preferences:
 | Retrieval | Permission-aware; returns nothing the analyst could not open directly |
 | ITSM integration | Read plus draft-write only; commits require analyst action |
 | Logging | Every retrieval, suggestion, confidence score, and analyst decision logged to SIEM |
-| Fallback | Assist-layer outage degrades to normal operations with zero impact on call handling |
+| Fallback | Test fallback to normal operations against approved call-handling and recovery objectives |
 
 ## Risk Profile
 

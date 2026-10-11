@@ -1,49 +1,40 @@
-﻿param(
-    [string]$TargetPath = "$HOME\Documents\enterprise-ai-agent-readiness",
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$TargetPath,
+    [switch]$Overwrite,
     [switch]$InitializeGit,
     [switch]$OpenFolder
 )
 
-$ErrorActionPreference = "Stop"
-
-Write-Host "Building repository at $TargetPath"
-
+$ErrorActionPreference = 'Stop'
 $source = Split-Path -Parent $PSScriptRoot
-if (Test-Path $TargetPath) {
-    Write-Host "Target exists. Existing files will be updated."
-} else {
-    New-Item -ItemType Directory -Path $TargetPath -Force | Out-Null
+& (Join-Path $PSScriptRoot 'validate-repository.ps1') -Path $source
+$target = [IO.Path]::GetFullPath($TargetPath)
+$sourceFull = [IO.Path]::GetFullPath($source)
+$comparison = if ($IsWindows) { [StringComparison]::OrdinalIgnoreCase } else { [StringComparison]::Ordinal }
+if ($target.Equals($sourceFull, $comparison) -or
+    $target.StartsWith($sourceFull + [IO.Path]::DirectorySeparatorChar, $comparison)) {
+    throw 'Build destination must be outside the source checkout.'
 }
-
-Copy-Item -Path "$source\*" -Destination $TargetPath -Recurse -Force
-
+$manifest = Get-Content -LiteralPath (Join-Path $source 'repository-manifest.json') -Raw | ConvertFrom-Json
+# Check every collision before copying anything. Never copy .git or unlisted content.
+foreach ($item in $manifest.tracked_files) {
+    if (-not $Overwrite -and (Test-Path -LiteralPath (Join-Path $target $item))) {
+        throw "Destination file exists: $item. Use a new directory or review before supplying -Overwrite."
+    }
+}
+if ($InitializeGit -and -not (Get-Command git -ErrorAction SilentlyContinue)) { throw 'Git is required for -InitializeGit.' }
+foreach ($item in $manifest.tracked_files) {
+    $destination = Join-Path $target $item
+    New-Item -ItemType Directory -Path (Split-Path -Parent $destination) -Force | Out-Null
+    Copy-Item -LiteralPath (Join-Path $source $item) -Destination $destination -Force
+}
 if ($InitializeGit) {
-    Push-Location $TargetPath
-    try {
-        if (-not (Test-Path ".git")) {
-            git init
-            git branch -M main
-        }
-        git add .
-        git commit -m "Build enterprise AI agent readiness framework"
-    }
-    finally {
-        Pop-Location
-    }
+    git -C $target init -b main
+    if ($LASTEXITCODE -ne 0) { throw 'Git initialization failed.' }
 }
-
 if ($OpenFolder) {
-    Start-Process explorer.exe $TargetPath
+    if ($IsWindows) { Start-Process explorer.exe -ArgumentList $target }
+    else { Write-Host "Open this directory in your file manager: $target" }
 }
-
-Write-Host ""
-Write-Host "Repository build complete."
-Write-Host "Path: $TargetPath"
-Write-Host ""
-Write-Host "Next steps:"
-Write-Host "1. Review README.md"
-Write-Host "2. Replace contact information if needed"
-Write-Host "3. Run git status"
-Write-Host "4. Create a GitHub repository named enterprise-ai-agent-readiness"
-Write-Host "5. Add the remote and push"
-
+Write-Host "Repository files copied to $target. No files were staged, committed, or published."

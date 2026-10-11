@@ -22,9 +22,11 @@ The single close-out artifact for an agent pilot: one page a sponsor reads, one 
 ## Gate Review (pass/fail -- any failure fails the pilot)
 
 - [ ] Quality metrics: no degradation
-- [ ] Citation integrity: 100% cited or declined
-- [ ] Permission integrity: zero unauthorized returns under adversarial testing
+- [ ] Citation integrity: Every substantive answer cited or declined; source support reviewed
+- [ ] Permission integrity: zero unauthorized returns observed in documented adversarial tests
 - [ ] Incidents: zero high-severity attributable to the agent
+
+Citation presence does not establish answer correctness. Before pilot launch, define claim-level source-support review, sampling coverage, evaluators, and pass/fail criteria. Record the permission-test population, negative cases, and limitations. Zero observed leaks is a test result, not a guarantee; maintain production monitoring and stop on any unauthorized return. Pilot performance targets are illustrative and must be approved for the selected use case before launch.
 
 ## Financial Snapshot
 

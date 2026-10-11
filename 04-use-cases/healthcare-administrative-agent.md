@@ -33,7 +33,7 @@ An administrative agent that receives a clinical question does one thing: it sta
 
 | Requirement | Detail |
 |---|---|
-| Business Associate Agreement | Executed with any vendor whose platform touches PHI-adjacent data flows |
+| Vendor agreements | Privacy and legal reviewers determine applicable vendor agreements from the documented data flow, vendor role, and intended processing before access is enabled |
 | Minimum-necessary access | Retrieval scopes reviewed per HIPAA principle; default is no PHI access at all |
 | Privacy review | Completed before pilot, refreshed on any scope change |
 | Clinical boundary review | Clinical and compliance leadership sign off on scope exclusions and routing paths |

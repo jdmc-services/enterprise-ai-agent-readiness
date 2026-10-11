@@ -1,59 +1,52 @@
-﻿param(
-    [string]$Path = "$HOME\Documents\enterprise-ai-agent-readiness"
+param(
+    [string]$Path = (Split-Path -Parent $PSScriptRoot)
 )
 
-$required = @(
-    "README.md",
-    "START-HERE.md",
-    "SECURITY.md",
-    "LICENSE",
-    "01-business-case\use-case-intake-template.md",
-    "01-business-case\value-hypothesis-template.md",
-    "01-business-case\pilot-scorecard.md",
-    "02-architecture\reference-architecture.md",
-    "02-architecture\data-flow-template.md",
-    "02-architecture\integration-inventory.md",
-    "03-security-governance\zero-trust-agent-controls.md",
-    "03-security-governance\ai-risk-assessment.md",
-    "03-security-governance\ai-incident-response.md",
-    "03-security-governance\human-approval-matrix.md",
-    "04-use-cases\help-desk-agent-assist.md",
-    "04-use-cases\contact-center-agent-assist.md",
-    "04-use-cases\healthcare-administrative-agent.md",
-    "04-use-cases\enterprise-knowledge-assistant.md",
-    "05-measurement\baseline-metrics.md",
-    "05-measurement\pilot-success-criteria.md",
-    "05-measurement\roi-model.md",
-    "06-workforce-enablement\training-plan.md",
-    "06-workforce-enablement\adoption-checklist.md",
-    "07-advisory-engagement\service-offerings.md",
-    "07-advisory-engagement\advisory-approach.md",
-    "07-advisory-engagement\engagement-ethics.md"
-)
-
-$missing = @()
-foreach ($item in $required) {
-    $full = Join-Path $Path $item
-    if (-not (Test-Path $full)) { $missing += $item }
+$ErrorActionPreference = 'Stop'
+$root = (Resolve-Path -LiteralPath $Path).Path
+$manifestPath = Join-Path $root 'repository-manifest.json'
+if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) {
+    throw 'Validation failed: repository-manifest.json is missing.'
+}
+$manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+$files = @($manifest.tracked_files)
+if ($files.Count -eq 0 -or $files.Count -ne $manifest.file_count -or
+    @($files | Sort-Object -Unique).Count -ne $files.Count) {
+    throw 'Validation failed: manifest count is incorrect or paths are empty/duplicated.'
+}
+foreach ($item in $files) {
+    if ([IO.Path]::IsPathRooted($item) -or $item -match '(^|[\\/])\.\.([\\/]|$)') {
+        throw "Validation failed: unsafe manifest path: $item"
+    }
+    if (-not (Test-Path -LiteralPath (Join-Path $root $item) -PathType Leaf)) {
+        throw "Validation failed: missing file: $item"
+    }
+}
+# Public partnership templates are intentional; private meeting notes are not.
+foreach ($item in @('meeting-prep')) {
+    if (Test-Path -LiteralPath (Join-Path $root $item)) {
+        throw "Validation failed: forbidden private path: $item"
+    }
 }
 
-# Guard against private meeting-prep material leaking into the public repo
-$forbidden = @("meeting-prep", "07-partnership-positioning")
-$leaks = @()
-foreach ($item in $forbidden) {
-    if (Test-Path (Join-Path $Path $item)) { $leaks += $item }
+if (Test-Path -LiteralPath (Join-Path $root '.git')) {
+    $tracked = @(git -C $root ls-files)
+    if ($LASTEXITCODE -ne 0) { throw 'git ls-files failed.' }
+    $difference = @(Compare-Object ($files | Sort-Object) ($tracked | Sort-Object))
+    if ($difference.Count) { throw "Validation failed: Git inventory differs from manifest: $($difference.InputObject -join ', ')" }
 }
 
-if ($missing.Count -gt 0) {
-    Write-Host "Validation failed. Missing files:"
-    $missing | ForEach-Object { Write-Host " - $_" }
-    exit 1
+foreach ($item in $files | Where-Object { $_ -like '*.md' }) {
+    $document = Join-Path $root $item
+    $content = Get-Content -LiteralPath $document -Raw
+    foreach ($match in [regex]::Matches($content, '\]\(([^)]+)\)')) {
+        $target = $match.Groups[1].Value
+        if ($target -match '^(https?://|mailto:|#)') { continue }
+        $relative = ($target -split '#', 2)[0]
+        if ($relative -and -not (Test-Path -LiteralPath (Join-Path (Split-Path -Parent $document) $relative))) {
+            throw "Validation failed: broken local link in ${item}: $target"
+        }
+    }
 }
-if ($leaks.Count -gt 0) {
-    Write-Host "Validation failed. Private material must not be in the public repository:"
-    $leaks | ForEach-Object { Write-Host " - $_" }
-    exit 1
-}
-
-Write-Host "Validation passed: all required files present, no private material detected."
-
+Write-Host 'Structural validation passed: inventory, configured forbidden paths, and local Markdown file targets checked.'
+Write-Host 'This check does not inspect sensitive content or Git history, validate external links, or test AI controls.'

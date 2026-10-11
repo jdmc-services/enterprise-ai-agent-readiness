@@ -44,7 +44,7 @@ flowchart LR
 - **Read-only first** — every deployment starts read-only; writes are earned through pilot evidence
 - **Deterministic controls for critical paths** — safety-relevant logic lives in code and configuration, not model judgment
 - **Full auditability** — reconstruction of any interaction from logs alone
-- **Safe failure** — agent outage degrades to normal operations, invisibly to customers
+- **Safe failure** — test fallback to normal operations against approved service and recovery objectives
 - **Vendor-independent systems of record** — replacing the agent platform must never mean migrating operational truth
 
 ## Environment Progression

@@ -1,8 +1,9 @@
-﻿{
+{
   "repository_name": "enterprise-ai-agent-readiness",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Vendor-neutral enterprise AI agent readiness framework for regulated environments",
-  "generated_files": [
+  "inventory_scope": "Complete tracked public file inventory, including this manifest; excludes Git metadata and local working outputs.",
+  "tracked_files": [
     ".github/ISSUE_TEMPLATE/risk-review.md",
     ".github/ISSUE_TEMPLATE/use-case-request.md",
     ".github/pull_request_template.md",
@@ -29,6 +30,11 @@
     "07-advisory-engagement/advisory-approach.md",
     "07-advisory-engagement/engagement-ethics.md",
     "07-advisory-engagement/service-offerings.md",
+    "07-partnership-positioning/conflict-of-interest-boundary.md",
+    "07-partnership-positioning/enterprise-ai-partnership-meeting-brief.md",
+    "07-partnership-positioning/independent-opportunities.md",
+    "07-partnership-positioning/value-proposition.md",
+    "08-validation/synthetic-validation-case.md",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE",
@@ -38,9 +44,11 @@
     "diagrams/agent-assist-architecture.mmd",
     "diagrams/governance-lifecycle.mmd",
     "diagrams/zero-trust-control-plane.mmd",
+    "repository-manifest.json",
     "scripts/build-repository.ps1",
     "scripts/publish-to-github.ps1",
-    "scripts/validate-repository.ps1"
+    "scripts/validate-repository.ps1",
+    "tests/test-repository-scripts.ps1"
   ],
-  "file_count": 38
+  "file_count": 45
 }

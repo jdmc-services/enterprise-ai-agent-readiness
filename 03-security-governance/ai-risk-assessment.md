@@ -23,17 +23,21 @@ Score each category **1 (lowest risk) to 5 (highest risk)**. Every score require
 |---|---|---|
 | 8–12 | **Low** | Standard controls; team-level approval |
 | 13–20 | **Moderate** | Moderate control tier; security sign-off; human approval on writes |
-| 21–30 | **High** | High control tier; security + privacy/compliance sign-off; human approval on all actions; isolated deployment |
+| 21–30 | **High** | High control tier; security + privacy/compliance sign-off; human approval on all consequential actions; isolated deployment |
 | 31–40 | **Elevated** | Executive and risk-committee review before any pilot; presumption is *no* until controls prove otherwise |
 
 Two overrides apply regardless of total score:
 
-- Any single category scored **5** elevates the use case at least one tier.
+- Any single category scored **5** elevates the use case one tier, capped at Elevated.
 - Any clinical, life-safety, or emergency-workflow adjacency is out of scope entirely — it does not enter this pipeline.
+
+## Applying Risk Tiers and Action Approvals
+
+Apply the highest requirement arising from the use-case risk tier, action-specific approval matrix, data classification, and organizational policy. Action labels are illustrative and do not lower the assessed use-case tier. High-risk consequential actions require explicit human approval; approved read-only activity remains subject to documented access and monitoring controls. Elevated cases require executive and risk-committee authorization before any pilot and use the High-tier controls as a minimum. Approval cannot authorize an action marked prohibited or agent execution marked No.
 
 ## Mandatory Questions
 
-These must be answered in writing before classification is final. "Unknown" is an answer — and it scores as a 5 until resolved.
+These must be answered in writing before classification is final. "Unknown" is an answer — the affected category scores 5 until resolved, and unresolved mandatory questions block pilot approval. The scoring thresholds are illustrative framework choices, not NIST-prescribed or empirically validated deployment thresholds.
 
 1. Can the agent expose information the requesting user is not authorized to see? Through what path was this tested?
 2. Can the agent make, trigger, or materially influence a consequential decision?

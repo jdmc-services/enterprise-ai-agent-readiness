@@ -5,7 +5,7 @@ A defensible ROI model for agent-assist initiatives. Its purpose is not to produ
 ## Benefit Model
 
 ```text
-  Labor Capacity Recovered      (AHT + ACW reduction × volume × loaded rate)
+  Labor Capacity Recovered      (non-overlapping time reduction × volume × loaded rate)
 + Overtime Reduction            (measured OT hours × OT rate)
 + Avoided Rework                (reassignment/transfer reduction × cost per touch)
 + Reduced Error Cost            (error-rate reduction × cost per error)
@@ -13,6 +13,8 @@ A defensible ROI model for agent-assist initiatives. Its purpose is not to produ
 + Deflection Value              (contacts deflected × cost per contact)
 = Gross Annual Benefit
 ```
+
+Define whether average handle time includes after-call work. If it does, count the AHT reduction once; do not add ACW again. Where components are measured separately, use non-overlapping talk, hold, and ACW reductions. Report recovered capacity separately from realized cash savings. Exclude overtime, rework, and deflection benefits already captured in another benefit line.
 
 **Attribution rules that keep the model honest:**
 
@@ -41,29 +43,33 @@ Omitting internal labor and governance cost is the most common way AI ROI models
 
 ```text
 Net Annual Benefit = Gross Annual Benefit − Gross Annual Cost
-ROI %             = Net Annual Benefit ÷ Gross Annual Cost
-Payback (months)  = Implementation Cost ÷ (Net Monthly Benefit)
+ROI (%)           = (Net Annual Benefit ÷ Gross Annual Cost) × 100
+Payback (months)  = One-Time Implementation Cost ÷ Net Recurring Monthly Cash Benefit
 ```
+
+Payback applies only when recurring monthly cash benefit, net of recurring costs, is positive. Do not count one-time implementation costs again in that monthly denominator. Capacity value alone does not establish cash payback.
 
 ## Worked Example (Synthetic)
 
-Mid-size service desk, 25 analysts, ~180k contacts/year:
+Mid-size service desk, 25 analysts, 180,000 contacts/year. For this fictional example, the 45-second reduction is talk/hold time excluding ACW; the separate 60-second ACW reduction does not overlap. Overtime and rework figures are assumed to arise from separate activity not included in the capacity line. These are assumptions for illustration, not measured results:
 
 | Item | Basis | Annual Amount |
 |---|---|---:|
-| Labor capacity recovered | 45s AHT + 60s ACW reduction × volume × $38/hr loaded | $198,000 |
+| Labor capacity recovered | (45s talk/hold + 60s ACW) × 180,000 ÷ 3,600 × $38/hr | $199,500 |
 | Overtime reduction | 1,600 OT hours reduced | $91,000 |
 | Avoided rework | 9,000 fewer reassignments × $8 | $72,000 |
-| **Gross benefit** | | **$361,000** |
+| **Gross benefit** | | **$362,500** |
 | Platform + consumption | | $96,000 |
 | Integration + implementation (yr 1) | | $85,000 |
 | Security, training, support, internal labor | | $88,000 |
 | **Gross cost (yr 1)** | | **$269,000** |
-| **Net benefit (yr 1)** | | **$92,000** |
-| **ROI (yr 1)** | | **34%** |
-| **ROI (yr 2, run-rate costs)** | | **~95%** |
+| **Net benefit (yr 1)** | | **$93,500** |
+| **ROI (yr 1)** | | **34.8%** |
+| **ROI (yr 2, run-rate costs)** | | **97.0%** |
 
-> Synthetic figures for methodology illustration only. A year-one ROI of 34% that is *real* beats a slideware 300% every time it meets a CFO. Replace every value with measured data from [Baseline Metrics](baseline-metrics.md) and the pilot.
+The $362,500 gross benefit includes $199,500 of capacity value and $163,000 of assumed cash savings. The 34.8% year-one figure is a combined capacity-and-cash value ROI, not cash ROI. With recurring costs of $184,000 and no repeated $85,000 implementation charge, year-two combined-value ROI is 97.0%. Under these assumptions, cash savings alone do not cover recurring costs, so cash payback is not demonstrated.
+
+> Synthetic figures for methodology illustration only. Replace every assumption with validated data from [Baseline Metrics](baseline-metrics.md) and the pilot. Do not claim financial savings or payback from unverified capacity value.
 
 ## Reporting Discipline
 
